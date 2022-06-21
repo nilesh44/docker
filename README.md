@@ -5,11 +5,20 @@ refer this https://docs.docker.com/engine/reference/run/
 
 - docker images
 
+**Remove docker images**
+- docker images rm <image-id>
+
 **Show list of container present in docker**
 
 - docker container ls -a
 - docker ps
-
+ 
+ **Stop container**
+ 
+ - docker container stop <container-id>
+ - docker container kill <container-id>
+**remove all non running container**
+ - docker container prune
 **Pull docker images from docker repository**
 
 - docker pull <e.g mysql>
