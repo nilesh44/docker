@@ -1,7 +1,9 @@
 refer this for latest mysql images https://hub.docker.com/_/mysql/?tab=tags
 
+### Docker commands
+
 **pull mysql images from docker repositorty**
-- docker pull <imageName:imageTag>
+- docker pull (imageName:imageTag)
 
 e.g docker pull mysql:8.0.29
 
