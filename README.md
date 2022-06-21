@@ -6,4 +6,4 @@
 
 **show list of container present in docker
 
---docker container ls -a
+- docker container ls -a
