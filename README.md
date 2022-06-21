@@ -14,3 +14,5 @@ refer this https://docs.docker.com/engine/reference/run/
 
 **run container**
 - docker run 
+ e.g run mysql instance on docker container
+ docker run -p 13306:3306 --name mysql-docker -e MYSQL_ROOT_PASSWORD=Password -d mysql:latest
