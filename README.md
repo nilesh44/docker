@@ -38,4 +38,12 @@ refer this https://docs.docker.com/engine/reference/run/
  **check ProcessId of container**
  - docker top (container-id)
  ![image](https://user-images.githubusercontent.com/44174633/174795564-5d308901-f623-418b-8c02-3613349235d6.png)
+ 
+ **docker system**
+ --docker system df
+ ![image](https://user-images.githubusercontent.com/44174633/174796101-4538bc8a-ce98-4d27-854e-235a5b98937a.png)
+
+ Add docker file 
+ ./gradlew clean build
+ docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
 
