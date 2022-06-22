@@ -1,4 +1,4 @@
-## Create spring boot Docker image
+## Create spring boot Docker image , run spring boot application and link with mysql container running in docker as container.
 
 
 **Add docker file in spring boot application with name "Dockerfile" without any extention**
@@ -36,7 +36,7 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
   datasource:
-    url: jdbc:mysql://mysql-docker(name of docker container):3306/login_mgt_2
+    url: jdbc:mysql://mysql-docker(name of mysql docker container):3306/login_mgt_2
     username: ****
     password: *******
     driver-class-name: com.mysql.cj.jdbc.Driver
