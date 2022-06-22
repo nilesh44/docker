@@ -45,5 +45,8 @@ refer this https://docs.docker.com/engine/reference/run/
 
  Add docker file 
  ./gradlew clean build
+ 
  docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
+ 
+ docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
 
