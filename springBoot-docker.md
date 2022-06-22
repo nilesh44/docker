@@ -10,6 +10,23 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} register-user.jar
 ENTRYPOINT ["java","-jar","/register-user.jar"]
 ```
+##Note
+
+**dataSource properties in application.yml**
+```
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://mysql-docker(name of mysql docker container):3306/login_mgt_2
+    username: ****
+    password: *******
+    driver-class-name: com.mysql.cj.jdbc.Driver
+```
 
 **create jar by running command**
 ```
@@ -26,20 +43,4 @@ docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
 docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
 ```
 
-##Note
 
-dataSource properties in application.yml
-```
-spring:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL8Dialect
-  datasource:
-    url: jdbc:mysql://mysql-docker(name of mysql docker container):3306/login_mgt_2
-    username: ****
-    password: *******
-    driver-class-name: com.mysql.cj.jdbc.Driver
-```
