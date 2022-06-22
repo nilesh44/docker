@@ -41,9 +41,12 @@ refer this https://docs.docker.com/engine/reference/run/
  
  **docker system**
  --docker system df
+ 
  ![image](https://user-images.githubusercontent.com/44174633/174796101-4538bc8a-ce98-4d27-854e-235a5b98937a.png)
 
+ 
  Add docker file 
+ 
  ./gradlew clean build
  
  docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
