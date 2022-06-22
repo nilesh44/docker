@@ -10,7 +10,7 @@ ARG JAR_FILE=target/*.jar
 COPY ${JAR_FILE} register-user.jar
 ENTRYPOINT ["java","-jar","/register-user.jar"]
 ```
-##Note
+## Note
 
 **dataSource properties in application.yml**
 ```
@@ -42,6 +42,13 @@ docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
 ```
 docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
 ```
+
+**check logs of application**
+```
+docker logs register-user-cont2(name of container)
+```
+![image](https://user-images.githubusercontent.com/44174633/174969876-18f5a0ab-5167-4c0b-be63-be9b5ee77e33.png)
+
 
 **Test  application**
 ![image](https://user-images.githubusercontent.com/44174633/174967352-488d416e-7871-4aef-878a-374cda6418c2.png)
