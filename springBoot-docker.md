@@ -15,10 +15,12 @@ ENTRYPOINT ["java","-jar","/register-user.jar"]
 ```
 ./gradlew clean build
 ```
+
 **create image of spring boot application**
 ```
 docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
 ```
+
 **run docker image and link mysql**
 ```
 docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
