@@ -7,8 +7,8 @@ e.g Dockerfile
 FROM openjdk:11
 EXPOSE 8080
 ARG JAR_FILE=target/*.jar
-COPY ${JAR_FILE} register-user.jar
-ENTRYPOINT ["java","-jar","/register-user.jar"]
+COPY ${JAR_FILE} register-user(name of spring boot application jar going to be created) .jar
+ENTRYPOINT ["java","-jar","/register-user(name of spring boot application jar going to be created).jar"]
 ```
 ## Note
 
@@ -35,12 +35,12 @@ spring:
 
 **create image of spring boot application**
 ```
-docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
+docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user(name of spring boot application jar created) .
 ```
 
 **run docker image and link mysql**
 ```
-docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
+docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker(name of mysql image):mysql -d register-user(name of spring boot application image)
 ```
 
 **check logs of application**
