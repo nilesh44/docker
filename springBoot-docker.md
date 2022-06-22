@@ -43,4 +43,8 @@ docker build --build-arg JAR_FILE=build/libs/*.jar -t register-user .
 docker run -p 8086:8080 --name register-user-cont2 --link mysql-docker:mysql -d register-user
 ```
 
+**Test  application**
+![image](https://user-images.githubusercontent.com/44174633/174967352-488d416e-7871-4aef-878a-374cda6418c2.png)
+
+
 
