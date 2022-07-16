@@ -19,14 +19,30 @@
 ```
  docker volume ls
 ```
+![image](https://user-images.githubusercontent.com/44174633/179359124-ea597874-03ef-4dca-bf3c-33eaa7816bee.png)
+
 
 * inspect volume 
 ```
  docker volume inspect mysql_data
  ```
+ 
+ ![image](https://user-images.githubusercontent.com/44174633/179359174-ada570d6-d1fd-496c-8211-643b402011d7.png)
+
  * Remove a volume:
   ```
   docker volume rm mysql_data
   ```
- * 
+  
+  ![image](https://user-images.githubusercontent.com/44174633/179359260-3829b763-d4be-423a-bae2-cf6b74eb2367.png)
+
+ * Attaching volume to service for persisting data
+ 
+ ![image](https://user-images.githubusercontent.com/44174633/179359410-e9afeed0-7392-41b5-9df5-413441be75b8.png)
+ 
+ * Remove All unused volume 
+ 
+ ![image](https://user-images.githubusercontent.com/44174633/179359630-78734b47-7414-4842-bac2-24fe614c9581.png)
+
+
 
