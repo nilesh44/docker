@@ -1,0 +1,44 @@
+
+#create file with name docker-compose.yml
+# run command on cmd or git bash , location where file is present
+# docker-compose up -d
+# -d for running in detached mode.
+
+version: '3.8'
+services:
+  mysqldb:
+    container_name: 'mysqldb'
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'passwor'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '23306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '23306'
+      # Where our data will be persisted
+    volumes:
+      - mysql_store:/var/lib/mysqldb
+      
+      # this mysql instance will belong to this network
+    networks:
+      - 'customer_mysql' 
+      
+      
+# Decleare volume to be create
+volumes:
+  mysql_store:
+    name: mysql_store
+  
+## decleare network to be created  
+networks:
+  customer_mysql:
+    name: customer_mysql
