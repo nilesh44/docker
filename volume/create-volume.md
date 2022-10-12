@@ -12,7 +12,7 @@ sudo docker volume ls
 
 ### remove volume :
 ~~~
-sudo docker volume tomcat-volume
+sudo docker volume rm tomcat-volume
 ~~~
 ![image](https://user-images.githubusercontent.com/44174633/195303057-2f2ab5ac-aac6-4b77-8e72-8c3a411095d8.png)
 
